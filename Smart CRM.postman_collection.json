@@ -1,0 +1,122 @@
+{
+	"info": {
+		"_postman_id": "4d4b4cbc-6307-48fe-a12e-f608e98b3bbf",
+		"name": "Smart CRM",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"grant_type\": \"password\",\n\t\"username\": \"{{username}}\",\n\t\"password\": \"{{password}}\"\n}"
+				},
+				"url": {
+					"raw": "https://slim-api.olbico.nl/api/oauth/token",
+					"protocol": "https",
+					"host": [
+						"slim-api",
+						"olbico",
+						"nl"
+					],
+					"path": [
+						"api",
+						"oauth",
+						"token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Selection Results",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44329/api/v201/dnb-nld/list",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44329",
+					"path": [
+						"api",
+						"v201",
+						"dnb-nld",
+						"list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Selection in Download format",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44329/api/v201/dnb-nld/list",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44329",
+					"path": [
+						"api",
+						"v201",
+						"dnb-nld",
+						"list"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "92c37d09826d6f9c00c0d9be88998dfa5e43078325c7f99b35064c0d0cb63836",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "b59484ec-71b5-4baf-92c5-54667cdb86fa",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "6696490e-7db5-4360-89af-b76039e92044",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
