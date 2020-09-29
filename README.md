@@ -1,1 +1,1 @@
-# Olbico-CRM-API
+﻿# Olbico-CRM-APIThis is an API to update your CRM with information from Altares Smart.
