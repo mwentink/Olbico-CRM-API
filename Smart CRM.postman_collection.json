@@ -84,6 +84,40 @@
 				}
 			},
 			"response": []
+		},
+		{
+			"name": "Update List Add new Numbers",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"Values\": [\r\n  \t{\r\n      \"Item1\": \"415562391\"\r\n    }\r\n  ],\r\n  \"Email\": true,\r\n  \"Type\": \"DUNS\",\r\n  \"Name\": \"My Postman List\",\r\n  \"Append\": true,\r\n  \"Public\": false,\r\n  \"IncludeFamilyTree\": true,\r\n  \"IsCustomList\": false,\r\n  \"ListCategoryId\": 0\r\n}"
+				},
+				"url": {
+					"raw": "https://localhost:44329/api/v201/dnb-nld/list/12337",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44329",
+					"path": [
+						"api",
+						"v201",
+						"dnb-nld",
+						"list",
+						"12337"
+					]
+				}
+			},
+			"response": []
 		}
 	],
 	"auth": {
